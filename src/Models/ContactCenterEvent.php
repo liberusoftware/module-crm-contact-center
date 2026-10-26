@@ -4,17 +4,13 @@ declare(strict_types=1);
 
 namespace Liberu\CRM\ContactCenter\Models;
 
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Liberu\Foundation\Organizations\Models\Team;
+use App\Traits\IsTenantModel;
 use Illuminate\Database\Eloquent\Model;
 
 /** @property int $team_id @property int $agent_id @property string $type @property string $status @property int|null $sla_seconds @property int|null $wait_seconds */
 final class ContactCenterEvent extends Model
 {
-    public function team(): BelongsTo
-    {
-        return $this->belongsTo(Team::class);
-    }
+    use IsTenantModel;
 
     protected $table = 'crm_contact_center_events';
 
