@@ -2,7 +2,7 @@
   "name": "crm-contact-center",
   "display_name": "CRM Contact Center",
   "description": "Agent presence, routing, capacity, quality and queue operations",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "category": "capability",
   "provider": "Liberu\\CRM\\ContactCenter\\ContactCenterServiceProvider",
   "requires": {
